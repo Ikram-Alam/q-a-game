@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KBC - Result</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        {% if lost %}
+            <h1>Game Over</h1>
+            <p>Sorry, you lost. Your prize: ${{ prize }}</p>
+        {% else %}
+            <h1>Congratulations!</h1>
+            <p>You completed the game! Your total prize: ${{ prize }}</p>
+        {% endif %}
+        <a href="/" class="restart-button">Play Again</a>
+    </div>
+</body>
+</html>

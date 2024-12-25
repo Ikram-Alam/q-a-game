@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KBC - Game</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Question</h1>
+        <p><strong>{{ question.question }}</strong></p>
+        <form method="post">
+            {% for option in question.options %}
+                <div>
+                    <input type="radio" name="option" value="{{ option[0] }}" required>
+                    <label>{{ option }}</label>
+                </div>
+            {% endfor %}
+            <button type="submit">Submit Answer</button>
+        </form>
+        <p>Current Prize: ${{ prize }}</p>
+    </div>
+</body>
+</html> 
